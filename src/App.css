@@ -1,0 +1,12 @@
+/* Main App styles - mostly handled by Tailwind */
+.nav-link {
+  @apply px-4 py-2 text-stone-700 hover:text-olive font-medium transition-smooth uppercase tracking-wider text-sm;
+}
+
+.section-padding {
+  @apply py-20 px-6 max-w-7xl mx-auto;
+}
+
+.card {
+  @apply bg-white/80 p-6 rounded-lg shadow-sm border border-stone-200 hover:shadow-md transition-smooth;
+}
