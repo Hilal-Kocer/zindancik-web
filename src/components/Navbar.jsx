@@ -18,6 +18,7 @@ const AnnouncementBar = () => (
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,14 +38,14 @@ const Navbar = () => {
   return (
     <header className="fixed w-full z-50">
       <AnnouncementBar />
-      <nav className={`w-full transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'}`}>
+      <nav className={`w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex flex-col leading-none">
-            <div className={`text-3xl font-serif font-black tracking-tighter transition-colors duration-300 ${isScrolled ? 'text-olive' : 'text-white'}`}>
+            <div className={`text-3xl font-serif font-black tracking-tighter transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-olive' : 'text-white'}`}>
               ZİNDANCIK
             </div>
             <div className="flex items-center gap-1.5 mt-0.5">
-              <div className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${isScrolled ? 'text-stone-400' : 'text-white/60'}`}>
+              <div className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-stone-400' : 'text-white/60'}`}>
                 Kır Bahçesi & Restoran
               </div>
             </div>
@@ -65,11 +66,36 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button className={`${isScrolled ? 'text-stone-700' : 'text-white'}`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`${isScrolled || isMenuOpen ? 'text-stone-700' : 'text-white'} transition-colors duration-300`}
+            >
+              {isMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              )}
             </button>
+          </div>
+        </div>
+
+        {/* Mobile menu overlay */}
+        <div className={`md:hidden absolute w-full bg-white shadow-2xl transition-all duration-500 overflow-hidden ${isMenuOpen ? 'max-h-[400px] border-t border-stone-100' : 'max-h-0'}`}>
+          <div className="flex flex-col p-8 space-y-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-stone-900 text-lg font-bold uppercase tracking-widest hover:text-olive transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
       </nav>
