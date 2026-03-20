@@ -23,14 +23,18 @@ const Hero = () => {
 
         <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-8 font-serif leading-tight tracking-tight">
           <span className="block animate-fade-in-up">
-            Yöresel Lezzetlerle <span className="text-cream drop-shadow-sm italic">Yeniden Doğuş</span>
+            Yöresel Lezzetlerle <span className="text-cream drop-shadow-md italic">Yeniden Doğuş</span>
           </span>
-          <span className="text-cream/90 italic font-light block mt-4 animate-fade-in-up delay-300 text-xl md:text-2xl lg:text-3xl tracking-wide">
-            Efsane Geri Dönüyor!
-          </span>
+          <div className="flex items-center justify-center gap-4 mt-6 animate-fade-in-up delay-300">
+            <div className="h-[1px] w-12 bg-cream/30 hidden md:block"></div>
+            <span className="text-cream font-bold block text-xl md:text-3xl lg:text-4xl tracking-wider text-glow italic">
+              Efsane Geri Dönüyor!
+            </span>
+            <div className="h-[1px] w-12 bg-cream/30 hidden md:block"></div>
+          </div>
         </h1>
 
-        <p className="text-base md:text-xl text-white/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed animate-fade-in-up delay-400">
+        <p className="text-lg md:text-2xl text-white mb-12 max-w-3xl mx-auto font-medium leading-relaxed animate-fade-in-up delay-400 drop-shadow-sm">
           İnözü Vadisi'nin ruhunu, yenilenen yüzümüz ve hizmet anlayışımızla tabağınıza taşımaya hazırlanıyoruz. Tadilatımız biter bitmez sizi ağırlamak için sabırsızlanıyoruz.
         </p>
 

@@ -41,7 +41,7 @@ const About = () => {
             <div className="bg-stone-50 rounded-3xl p-8 border border-stone-100 flex flex-col md:flex-row gap-8 items-center md:items-start group transition-all duration-500 hover:shadow-xl">
               <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg shrink-0 border-2 border-olive/20 group-hover:scale-105 transition-transform duration-500">
                 <img
-                  src="/babam.jpeg"
+                  src="/kurucumuz.jpeg"
                   alt="Kurucumuz"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
@@ -74,11 +74,9 @@ const About = () => {
                   <img src="/kapama.jfif" alt="Dining" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/10"></div>
                 </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl bg-olive flex items-center justify-center text-white text-center p-6">
-                  <div>
-                    <div className="text-4xl font-serif font-bold mb-1 italic">Est.</div>
-                    <div className="text-2xl font-bold tracking-[0.2em]">2003</div>
-                  </div>
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl relative group">
+                  <img src="/manzara2.webp" alt="Aile Mirası" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-black/10"></div>
                 </div>
               </div>
               <div className="space-y-4">
