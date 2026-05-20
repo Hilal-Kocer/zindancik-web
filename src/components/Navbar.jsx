@@ -31,7 +31,7 @@ const Navbar = () => {
       <nav className={`w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center gap-1.5 group">
-            <div className={`transition-all duration-700 overflow-hidden flex-shrink-0 ${isScrolled || isMenuOpen ? 'w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 opacity-100' : 'w-0 h-16 sm:h-20 md:h-28 opacity-0 -ml-4 md:-ml-10'}`}>
+            <div className={`transition-all duration-700 overflow-hidden flex-shrink-0 ${isScrolled || isMenuOpen ? 'w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 opacity-100' : 'w-0 h-20 sm:h-24 md:h-28 opacity-0 -ml-4 md:-ml-10'}`}>
               <img
                 src="/logo_arkaplan_yok.png"
                 alt="Zindancık Logo"
