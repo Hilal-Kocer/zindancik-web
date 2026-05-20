@@ -4,30 +4,30 @@ const Testimonials = () => {
   const reviews = [
     {
       id: 1,
-      name: "Selin Yılmaz",
-      date: "2 hafta önce",
+      name: "Gökhan Erbay",
+      date: "Yeni",
       source: "Google",
       rating: 5,
-      comment: "Zindancık Kır Bahçesi-Restoran'ta yediğimiz akşam yemeği tek kelimeyle kusursuzdu. Manzara büyüleyici, servis ise çok nazikti. Özellikle kuzu kapamasını mutlaka denemelisiniz!",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
+      comment: "Sanırım işletme el değiştirmiş içerisi baştan sona yenilenmiş. İlgi hizmet ve lezzet çok güzeldi gerçekten fiyatlarda makuldü 4 kişi abartılı bir fiyat ödemedik ve lezzet ve hizmetten memnun kaldık. Gittiğimizde yeni yağmur yağmıştı yeşillikler kuş ve dere sesinin atmosferi bizi mesh etti resmen.",
+      avatar: "https://ui-avatars.com/api/?name=Gökhan+Erbay&background=556B2F&color=fff"
     },
     {
       id: 2,
-      name: "Murat Can",
-      date: "1 ay önce",
-      source: "TripAdvisor",
+      name: "Gülsüm Büşra Arslan",
+      date: "Yeni",
+      source: "Google",
       rating: 5,
-      comment: "Beypazarı'nda gidilebilecek en kaliteli mekan. Doğanın içinde, huzur dolu bir atmosfer. Yemeklerin lezzeti kadar sunumu da çok başarılıydı.",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150"
+      comment: "Güler yüz ve harika servis 🌸 Tadı damağımda kaldı. Bundan sonra pazar kahvaltılarımızın yeni adresi😌doğa ve lezzetli yemekler bir arada🤍 Elinize sağlık👏🏻👏🏻",
+      avatar: "https://ui-avatars.com/api/?name=Gülsüm+Büşra+Arslan&background=556B2F&color=fff"
     },
     {
       id: 3,
-      name: "Ayşe Demir",
-      date: "3 hafta önce",
+      name: "Cansu Güngör",
+      date: "Yeni",
       source: "Google",
       rating: 5,
-      comment: "Ailecek gittik ve çok memnun kaldık. Çocuklar için bile harika bir alan var. Kahvaltısı çok zengin ve her şey çok taze. Kesinlikle tavsiye ederim.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150"
+      comment: "Yenilenen yüzü, o bildiğimiz sıcak ve samimi ruhu hiç kaybetmeden mekanın enerjisini bambaşka bir seviyeye taşımış. Doğanın kalbinde, hem tanıdık bir misafirperverlik buluyor hem de yapılan estetik yeniliklerle çok daha keyifli bir atmosferde vakit geçiriyorsunuz. Yemeklerin lezzeti, kalitesi, güler yüzlü hizmeti kusursuz! Emeklerinize, ellerinize sağlık",
+      avatar: "https://ui-avatars.com/api/?name=Cansu+Güngör&background=556B2F&color=fff"
     }
   ];
 
@@ -85,7 +85,7 @@ const Testimonials = () => {
 
         <div className="mt-16 text-center">
           <a
-            href="https://maps.app.goo.gl/CsE5Ses6GzZsJNmG6"
+            href="https://maps.app.goo.gl/xZFNeMMgCJwdciNa7"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-stone-900 font-bold uppercase tracking-[0.2em] text-sm hover:text-olive transition-all group"

@@ -2,12 +2,10 @@ import React from 'react';
 
 const SocialFeed = () => {
   const instagramPosts = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80', likes: '1.2k', comments: '42' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80', likes: '850', comments: '12' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&q=80', likes: '2.1k', comments: '64' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1547825407-2d060104b7f8?auto=format&fit=crop&q=80', likes: '940', comments: '28' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80', likes: '1.5k', comments: '31' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80', likes: '3.2k', comments: '88' },
+    { id: 1, type: 'video', url: '/video1.mp4', likes: '1.2k', comments: '42' },
+    { id: 2, type: 'video', url: '/video2.mp4', likes: '850', comments: '12' },
+    { id: 3, type: 'video', url: '/video3.mp4', likes: '2.1k', comments: '64' },
+    { id: 4, type: 'image', url: '/IMG_9400.jpg', likes: '940', comments: '28' },
   ];
 
   return (
@@ -20,14 +18,25 @@ const SocialFeed = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 px-2 md:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-4 max-w-5xl mx-auto gap-2 px-2 md:px-0">
         {instagramPosts.map((post) => (
           <div key={post.id} className="group relative aspect-square overflow-hidden bg-stone-800 cursor-pointer">
-            <img
-              src={post.url}
-              alt="Instagram Feed"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-            />
+            {post.type === 'video' ? (
+              <video
+                src={post.url}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              />
+            ) : (
+              <img
+                src={post.url}
+                alt="Instagram Feed"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              />
+            )}
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="flex gap-6 text-white font-bold">
@@ -61,7 +70,7 @@ const SocialFeed = () => {
         </a>
 
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/profile.php?id=61590076742007"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative px-6 py-5 bg-stone-800 text-white rounded-2xl font-bold uppercase tracking-widest hover:bg-blue-600 transition-all duration-300 flex items-center gap-4"

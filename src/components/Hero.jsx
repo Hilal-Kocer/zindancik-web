@@ -6,7 +6,7 @@ const Hero = () => {
       {/* Background with Ken Burns Effect */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/arkaplan.jpg"
+          src="/yenii.jpeg"
           alt="Zindancık Manzarası"
           className="w-full h-full object-cover animate-ken-burns"
         />
@@ -35,7 +35,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg md:text-2xl text-white mb-12 max-w-3xl mx-auto font-medium leading-relaxed animate-fade-in-up delay-400 drop-shadow-sm">
-          İnözü Vadisi'nin ruhunu, yenilenen yüzümüz ve hizmet anlayışımızla tabağınıza taşımaya hazırlanıyoruz. Tadilatımız biter bitmez sizi ağırlamak için sabırsızlanıyoruz.
+          İnözü Vadisi'nin ruhunu, benzersiz lezzetlerimiz ve özenli hizmet anlayışımızla tabağınıza taşıyoruz.
         </p>
 
         {IS_CONTACT_LIVE && (
@@ -52,9 +52,9 @@ const Hero = () => {
       </div>
 
       {/* Modernized Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-scroll-bounce opacity-70 hover:opacity-100 transition-opacity">
-        <a href="#about" className="flex flex-col items-center gap-3">
-          <span className="text-[10px] text-white uppercase tracking-[0.4em] font-bold">Keşfet</span>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 opacity-70 hover:opacity-100 transition-opacity">
+        <a href="#about" className="flex flex-col items-center gap-3 animate-scroll-bounce">
+          <span className="text-[10px] text-white uppercase tracking-[0.4em] font-bold pl-[0.4em]">Keşfet</span>
           <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
         </a>
       </div>

@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="text-stone-400 space-y-4">
               <p>İnozu Vadisi Kalınyol Sk 3. km no 53, 06730 Türkiye<br />Beypazarı, Ankara</p>
               <a
-                href="https://maps.app.goo.gl/CsE5Ses6GzZsJNmG6"
+                href="https://maps.app.goo.gl/sFDGU6MhoSYGzfwP6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white hover:text-olive transition-colors underline underline-offset-4"

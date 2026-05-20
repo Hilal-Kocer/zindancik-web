@@ -24,7 +24,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-1">Rezervasyon Hattı</p>
-                      <a href="tel:+905555555555" className="text-2xl font-bold hover:text-olive transition-colors underline underline-offset-8 decoration-stone-700">+90 (555) 555 55 55</a>
+                      <a href="tel:+903127636008" className="text-2xl font-bold hover:text-olive transition-colors underline underline-offset-8 decoration-stone-700">+90 (312) 763 60 08</a>
                     </div>
                   </div>
 
@@ -36,7 +36,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-1">WhatsApp Mesaj</p>
-                      <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-green-500 transition-colors underline underline-offset-8 decoration-stone-700">Canlı Destek Başlat</a>
+                      <a href="https://wa.me/903127636008" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-green-500 transition-colors underline underline-offset-8 decoration-stone-700">Canlı Destek Başlat</a>
                     </div>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-100 pb-4">
                   <span className="text-stone-600 font-medium">Cumartesi - Pazar</span>
-                  <span className="text-stone-900 font-bold">10:00 - 00:00</span>
+                  <span className="text-stone-900 font-bold">09:30 - 23:00</span>
                 </div>
               </div>
 
@@ -68,7 +68,7 @@ const Contact = () => {
                   İnozu Vadisi Kalınyol Sk 3. km no 53,<br />
                   06730 Beypazarı, Ankara
                 </p>
-                <a href="https://maps.app.goo.gl/CsE5Ses6GzZsJNmG6" target="_blank" rel="noopener noreferrer" className="inline-block mt-6 text-olive font-bold uppercase tracking-widest text-sm hover:translate-x-2 transition-transform duration-300">
+                <a href="https://maps.app.goo.gl/xZFNeMMgCJwdciNa7" target="_blank" rel="noopener noreferrer" className="inline-block mt-6 text-olive font-bold uppercase tracking-widest text-sm hover:translate-x-2 transition-transform duration-300">
                   Yol Tarifi Al →
                 </a>
               </div>
@@ -79,7 +79,7 @@ const Contact = () => {
         {/* Call to Action Bar */}
         <div className="mt-12 text-center animate-fade-in">
           <p className="text-stone-500 mb-6">Sorularınız için bize e-posta yoluyla da ulaşabilirsiniz:</p>
-          <a href="mailto:info@zindancik.com" className="text-stone-900 font-bold hover:text-olive transition-colors text-lg">info@zindancik.com</a>
+          <a href="mailto:zindancik.info@gmail.com" className="text-stone-900 font-bold hover:text-olive transition-colors text-lg">zindancik.info@gmail.com</a>
         </div>
       </div>
     </section>

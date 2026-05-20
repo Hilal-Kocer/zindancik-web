@@ -2,15 +2,28 @@ import React from 'react';
 
 const Menu = () => {
   const regionalFavorites = [
-    { name: 'Köy Kahvaltısı', desc: 'Tamamen doğal, el yapımı reçeller, zeytinler ve yöresel peynirler.', price: '450₺' },
-    { name: 'Ege Otları Kavurması', desc: 'Mevsimlik taze otlar, sızma zeytinyağı ve sarımsaklı yoğurt ile.', price: '180₺' },
-    { name: 'Fırın Mantar', desc: 'Köy tereyağı ve taze kekik ile toprak kapta pişirilmiş.', price: '210₺' },
+    { name: 'Köy Kahvaltısı', desc: 'Peynir, zeytin, bal, kaymak, tahin, pekmez, reçel (gül reçeli, vişne reçeli), sigara böreği, pişi, yağlı bazlama, simit, beypazarı kurusu, patates kızartması, sucuklu yumurta, domates, salatalık, yeşillik, mevsim meyvesi, acılı ezme, çay. Kahvaltımız en az 2 kişiliktir.', price: '600₺' },
   ];
 
   const grillSelection = [
-    { name: 'Zindancık Kebabı', desc: 'Özel marine edilmiş kuzu eti, köz patlıcan ve lavaş ile.', price: '520₺' },
-    { name: 'Meşe Ateşinde Köfte', desc: 'Kasap tarzı, baharatlı ve közlenmiş biber-domates eşliğinde.', price: '380₺' },
-    { name: 'Kuzu İncik', desc: 'Ağır ateşte 8 saat lokum kıvamında pişmiş.', price: '590₺' },
+    { name: 'Uruş Kapaması', desc: 'Toprak testide pişen kuzu veya dana eti, pirinç ve özel baharatların muhteşem uyumuyla hazırlanan geleneksel Beypazarı/Uruş lezzeti. En az 2 kişi için servis edilir.', price: '' },
+    { name: 'Beypazarı Güveci (Dana)', desc: 'Etli yöresel Beypazarı güveci.', price: '550₺' },
+    { name: 'Beypazarı Yaprak Sarması', desc: 'Etli yöresel Beypazarı yaprak sarması.', price: '450₺' },
+    { name: 'Beypazarı Höşmerim Tatlısı', desc: 'Yöresel şerbetli Beypazarı tatlısı.', price: '300₺' },
+  ];
+
+  const kapamaOptions = [
+    { name: 'Kuzu Etli', desc: '2 kişilik servis fiyatı', price: '1300₺' },
+    { name: 'Dana Etli', desc: '2 kişilik servis fiyatı', price: '1100₺' },
+  ];
+
+  const breakfastExtras = [
+    { name: 'Menemen', desc: '', price: '250₺' },
+    { name: 'Mumbarlı Yumurta', desc: '', price: '350₺' },
+    { name: 'Mumbar', desc: '', price: '300₺' },
+    { name: 'Patates Kızartması', desc: '', price: '200₺' },
+    { name: 'Sucuklu Yumurta', desc: '', price: '350₺' },
+    { name: 'Gözleme', desc: '', price: '200₺' },
   ];
 
   const MenuItem = ({ name, desc, price }) => (
@@ -24,7 +37,7 @@ const Menu = () => {
   );
 
   return (
-    <section id="menu" className="section-padding bg-white">
+    <section id="menu" className="section-padding bg-cream">
       <div className="section-container">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl text-stone-900 mb-6 font-serif">Mutfak Hazinemiz</h2>
@@ -34,6 +47,29 @@ const Menu = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
+          {/* Kahvaltı */}
+          <div>
+            <div className="flex items-center gap-4 mb-10">
+              <span className="w-12 h-[2px] bg-olive"></span>
+              <h3 className="text-3xl font-serif text-olive italic">Kahvaltı</h3>
+            </div>
+
+            <div className="space-y-8">
+              <MenuItem {...regionalFavorites[0]} />
+            </div>
+
+            {/* Kahvaltı Ekstraları */}
+            <div className="mt-8 mb-10 pl-6 md:pl-8 border-l-2 border-olive/20">
+              <h4 className="text-xl font-serif text-olive italic mb-6">Kahvaltı Ekstraları</h4>
+              <div className="space-y-6">
+                {breakfastExtras.map((item, idx) => (
+                  <MenuItem key={idx} {...item} />
+                ))}
+              </div>
+            </div>
+
+          </div>
+
           {/* Yöresel Lezzetler */}
           <div>
             <div className="flex items-center gap-4 mb-10">
@@ -41,20 +77,21 @@ const Menu = () => {
               <h3 className="text-3xl font-serif text-olive italic">Yöresel Lezzetler</h3>
             </div>
             <div className="space-y-8">
-              {regionalFavorites.map((item, idx) => (
-                <MenuItem key={idx} {...item} />
-              ))}
+              <MenuItem {...grillSelection[0]} />
             </div>
-          </div>
 
-          {/* Ateşten Izgaralar */}
-          <div>
-            <div className="flex items-center gap-4 mb-10">
-              <span className="w-12 h-[2px] bg-olive"></span>
-              <h3 className="text-3xl font-serif text-olive italic">Ateşten Izgaralar</h3>
+            {/* Kapama Seçenekleri */}
+            <div className="mt-8 mb-10 pl-6 md:pl-8 border-l-2 border-olive/20">
+              <h4 className="text-xl font-serif text-olive italic mb-6">Et Seçenekleri</h4>
+              <div className="space-y-6">
+                {kapamaOptions.map((item, idx) => (
+                  <MenuItem key={idx} {...item} />
+                ))}
+              </div>
             </div>
+
             <div className="space-y-8">
-              {grillSelection.map((item, idx) => (
+              {grillSelection.slice(1).map((item, idx) => (
                 <MenuItem key={idx} {...item} />
               ))}
             </div>
@@ -62,10 +99,10 @@ const Menu = () => {
         </div>
 
         <div className="mt-24 text-center">
-          <button className="group relative px-12 py-4 rounded-full border-2 border-stone-800 text-stone-800 font-bold uppercase tracking-widest text-sm hover:text-white transition-all duration-300 overflow-hidden">
+          <a href="/menü.jpeg" target="_blank" rel="noopener noreferrer" className="group relative inline-block px-12 py-4 rounded-full border-2 border-stone-800 text-stone-800 font-bold uppercase tracking-widest text-sm hover:text-white transition-all duration-300 overflow-hidden">
             <span className="relative z-10">Tüm Menüyü Gör</span>
             <div className="absolute inset-0 bg-stone-800 translate-y-full group-hover:translate-y-0 transition-transform duration-300 -z-0"></div>
-          </button>
+          </a>
         </div>
       </div>
     </section>

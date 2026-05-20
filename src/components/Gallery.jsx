@@ -4,12 +4,12 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    { url: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800', alt: 'Grill' },
-    { url: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800', alt: 'Cocktail' },
-    { url: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800', alt: 'Dining area' },
-    { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800', alt: 'Fine dining' },
-    { url: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=800', alt: 'Local food' },
-    { url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800', alt: 'Table spread' },
+    { url: '/IMG_9838.jpg', alt: 'uruş kapama' },
+    { url: '/arkaa.jpeg', alt: 'Manzara' },
+    { url: '/IMG_9910.jpg', alt: 'Kahvaltı' },
+    { url: '/IMG_9358.jpg', alt: 'Manzara' },
+    { url: '/IMG_9827.jpg', alt: 'Kamelya' },
+    { url: '/IMG_9400.jpg', alt: 'Manzara' },
   ];
 
   return (
@@ -22,14 +22,14 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {images.map((img, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               onClick={() => setSelectedImage(img)}
               className="group relative aspect-square overflow-hidden rounded-2xl shadow-xl cursor-pointer"
             >
-              <img 
-                src={img.url} 
-                alt={img.alt} 
+              <img
+                src={img.url}
+                alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
@@ -40,15 +40,22 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <a href="#tum-fotograflar" className="group relative inline-block px-12 py-4 rounded-full border-2 border-stone-800 text-stone-800 font-bold uppercase tracking-widest text-sm hover:text-white transition-all duration-300 overflow-hidden">
+            <span className="relative z-10">Daha Fazla Fotoğraf</span>
+            <div className="absolute inset-0 bg-stone-800 translate-y-full group-hover:translate-y-0 transition-transform duration-300 -z-0"></div>
+          </a>
+        </div>
       </div>
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] bg-stone-950/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 animate-fade-in"
           onClick={() => setSelectedImage(null)}
         >
-          <button 
+          <button
             className="absolute top-10 right-10 text-white hover:text-olive transition-colors"
             onClick={() => setSelectedImage(null)}
           >
@@ -56,9 +63,9 @@ const Gallery = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          
-          <img 
-            src={selectedImage.url.replace('w=800', 'w=1600')} 
+
+          <img
+            src={selectedImage.url.replace('w=800', 'w=1600')}
             alt={selectedImage.alt}
             className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-fade-in-up"
           />

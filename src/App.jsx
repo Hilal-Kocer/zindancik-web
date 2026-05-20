@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials';
 import SocialFeed from './components/SocialFeed';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AllPhotos from './components/AllPhotos';
 import { 
   IS_MENU_LIVE, 
   IS_GALLERY_LIVE, 
@@ -17,6 +18,21 @@ import {
 } from './config';
 
 function App() {
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  if (currentHash === '#tum-fotograflar') {
+    return <AllPhotos />;
+  }
+
   return (
     <div className="min-h-screen selection:bg-olive selection:text-white">
       <Navbar />

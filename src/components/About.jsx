@@ -71,11 +71,11 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl relative group">
-                  <img src="/kapama.jfif" alt="Dining" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src="/uruş.jpeg" alt="Dining" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/10"></div>
                 </div>
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-xl relative group">
-                  <img src="/manzara2.webp" alt="Aile Mirası" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src="/IMG_9346.jpg" alt="Aile Mirası" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/10"></div>
                 </div>
               </div>
