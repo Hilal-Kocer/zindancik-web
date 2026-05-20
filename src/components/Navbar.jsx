@@ -29,9 +29,9 @@ const Navbar = () => {
   return (
     <header className="fixed w-full z-50">
       <nav className={`w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center gap-1.5 group">
-            <div className={`transition-all duration-700 overflow-hidden flex-shrink-0 ${isScrolled || isMenuOpen ? 'w-28 h-28 opacity-100' : 'w-0 h-28 opacity-0 -ml-10'}`}>
+            <div className={`transition-all duration-700 overflow-hidden flex-shrink-0 ${isScrolled || isMenuOpen ? 'w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 opacity-100' : 'w-0 h-16 sm:h-20 md:h-28 opacity-0 -ml-4 md:-ml-10'}`}>
               <img
                 src="/logo_arkaplan_yok.png"
                 alt="Zindancık Logo"
@@ -39,11 +39,11 @@ const Navbar = () => {
               />
             </div>
             <div className="flex flex-col leading-none">
-              <div className={`text-2xl md:text-3xl font-serif font-black tracking-tighter transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-olive' : 'text-white'}`}>
+              <div className={`whitespace-nowrap text-xl sm:text-2xl md:text-3xl font-serif font-black tracking-tighter transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-olive' : 'text-white'}`}>
                 ZİNDANCIK
               </div>
               <div className="flex items-center gap-1.5 mt-0.5">
-                <div className={`text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-stone-400' : 'text-white/60'}`}>
+                <div className={`whitespace-nowrap text-[9px] sm:text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-stone-400' : 'text-white/60'}`}>
                   Kır Bahçesi & Restoran
                 </div>
               </div>
