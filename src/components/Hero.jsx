@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="flex items-center justify-center gap-4 mt-6 animate-fade-in-up delay-300">
             <div className="h-[1px] w-12 bg-cream/30 hidden md:block"></div>
             <span className="text-cream font-bold block text-xl md:text-3xl lg:text-4xl tracking-wider text-glow italic">
-              Efsane Geri Dönüyor!
+
             </span>
             <div className="h-[1px] w-12 bg-cream/30 hidden md:block"></div>
           </div>
