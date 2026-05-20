@@ -2,7 +2,7 @@ import React from 'react';
 
 const Menu = () => {
   const regionalFavorites = [
-    { name: 'Köy Kahvaltısı', desc: 'Peynir, zeytin, bal, kaymak, tahin, pekmez, reçel (gül reçeli, vişne reçeli), sigara böreği, pişi, yağlı bazlama, simit, beypazarı kurusu, patates kızartması, sucuklu yumurta, domates, salatalık, yeşillik, mevsim meyvesi, acılı ezme, çay. Kahvaltımız en az 2 kişiliktir.', price: '600₺' },
+    { name: 'Köy Kahvaltısı', desc: 'Peynir, zeytin, bal, kaymak, tahin, pekmez, reçel çeşitleri, kalem böreği, pişi, yağlı bazlama, simit, beypazarı kurusu, patates kızartması, sucuklu yumurta, domates, salatalık, yeşillik, mevsim meyvesi, acılı ezme, çay. Kahvaltımız en az 2 kişiliktir.', price: '600₺' },
   ];
 
   const grillSelection = [

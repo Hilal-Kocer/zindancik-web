@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-100 pb-4">
                   <span className="text-stone-600 font-medium">Cumartesi - Pazar</span>
-                  <span className="text-stone-900 font-bold">09:30 - 23:00</span>
+                  <span className="text-stone-900 font-bold">08:30 - 23:00</span>
                 </div>
               </div>
 
