@@ -60,7 +60,7 @@ const SocialFeed = () => {
 
       <div className="mt-20 flex flex-wrap justify-center gap-8 items-center">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/zindancik_kirbahcesi_restoran/"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative px-10 py-5 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white rounded-2xl font-bold uppercase tracking-widest hover:scale-105 transition-all duration-300 shadow-2xl flex items-center gap-4"
